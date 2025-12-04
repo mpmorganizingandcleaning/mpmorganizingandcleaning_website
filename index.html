@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MPM Organizing & Cleaning, LLC</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f6f7f9; }
+    header { background: #0b78a3; color: #fff; padding: 20px; text-align: center; }
+    header h1, header p { margin: 5px; }
+    .container { padding: 20px; max-width: 1000px; margin: auto; }
+    .services, .gallery, .reviews { margin-top: 30px; }
+    .services div, .reviews div { background: #fff; padding: 15px; margin-bottom: 10px; border-radius: 8px; }
+    .gallery img { width: 32%; margin: 1%; border-radius: 8px; display: inline-block; cursor: pointer; }
+    footer { background: #0b78a3; color: #fff; text-align: center; padding: 12px; margin-top: 40px; }
+
+    .editable { outline: 2px dashed #aaa; padding: 2px; }
+    .gallery img { border: 2px dashed #ccc; }
+  </style>
+</head>
+<body>
+
+<header contenteditable="true" class="editable">
+  <h1>MPM Organizing & Cleaning, LLC</h1>
+  <p>Residential & Commercial Cleaning and Organizing</p>
+  <p>Call / Text Mike: (917) 337-5983</p>
+</header>
+
+<div class="container">
+  <section class="services">
+    <h2 contenteditable="true" class="editable">Our Services</h2>
+    <div contenteditable="true" class="editable"><strong>Residential Cleaning:</strong> Weekly, biweekly, deep cleans, move-in/out.</div>
+    <div contenteditable="true" class="editable"><strong>Commercial Cleaning:</strong> Small office, workspace sanitization.</div>
+    <div contenteditable="true" class="editable"><strong>Organizing Services:</strong> Closets, kitchens, garage, home office.</div>
+  </section>
+
+  <section class="gallery">
+    <h2 contenteditable="true" class="editable">Before & After</h2>
+    <img src="images/before1.jpg" alt="Before 1" onclick="editImage(this)">
+    <img src="images/after1.jpg" alt="After 1" onclick="editImage(this)">
+    <img src="images/before2.jpg" alt="Before 2" onclick="editImage(this)">
+    <img src="images/after2.jpg" alt="After 2" onclick="editImage(this)">
+  </section>
+
+  <section class="reviews">
+    <h2 contenteditable="true" class="editable">Customer Reviews</h2>
+    <div contenteditable="true" class="editable">"Fantastic job — my house has never looked better." — Sarah R., Bergen County</div>
+    <div contenteditable="true" class="editable">"Reliable & thorough. Transformed my garage and office." — Carlos M., Rockland County</div>
+  </section>
+</div>
+
+<footer contenteditable="true" class="editable">
+  &copy; 2025 MPM Organizing & Cleaning, LLC — Serving Bergen, Rockland & Orange Counties
+</footer>
+
+<script>
+  function editImage(img) {
+    const url = prompt("Enter image URL to replace this image:", img.src);
+    if (url) img.src = url;
+  }
+</script>
+
+</body>
+</html>
